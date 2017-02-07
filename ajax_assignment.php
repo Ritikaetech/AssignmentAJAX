@@ -56,20 +56,20 @@
 
      $(document).ready(function(){
      $("#submit").click(function() {
- 
+ 	/*
       var Name = $("input[name]").val(); 
       var email = $("input[email]").val();
       var message = $("input[message]").val();
       var dob = $("input[dob]").val();
-       
+       */
        $.ajax({
-          url:'insert.php?name='+Name,
+          url:'insert.php',
           type:'post',
           data: {
-                    "Name": Name,
-                    'email': email,
-                    'message': message,
-                    'dob':dob ,
+                    "Name": $("input[name]").val(),
+                    'email': $("input[email]").val(),
+                    'message':$("input[message]").val(),
+                    'dob':$("input[dob]").val() ,
                  },
 
           //dataType: "json",
@@ -78,9 +78,9 @@
      //alert("message");
      //url:'insert.php'
            }
-      });
-return false;
-    })
+   	   });
+   	   return false;
+    });
   });
  </script>
  
