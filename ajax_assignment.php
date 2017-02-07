@@ -35,10 +35,10 @@
       <div class="modal-body">
           <form action="insert.php" method="post">
             <div class="container">
-               <div class="col-md-2">Name:</div><div class="col-md-10"> <input type="text" name="name"><br><br></div>
-               <div class="col-md-2">E-mail:</div><div class="col-md-10"><input type="text" name="email"><br><br></div>
-               <div class="col-md-2">Message:</div><div class="col-md-10"> <input type="text" name="message"><br><br></div>
-               <div class="col-md-2">Date:</div><div class="col-md-10"> <input type="date" name="dob"><br><br></div>
+               <div class="col-md-2">Name:</div><div class="col-md-10"> <input type="text" name="name" id="names"><br><br></div>
+               <div class="col-md-2">E-mail:</div><div class="col-md-10"><input type="text" name="email" id="email"><br><br></div>
+               <div class="col-md-2">Message:</div><div class="col-md-10"> <input type="text" name="message" id="message"><br><br></div>
+               <div class="col-md-2">Date:</div><div class="col-md-10"> <input type="date" name="dob" id="dob"><br><br></div>
                <input type="submit" id="submit">
             </div>
           </form>
