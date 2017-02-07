@@ -13,7 +13,7 @@ $dbname = "excelarf_ritika";
      }
      
      else{		
-			$name=$_POST["name"];
+			$name=$_POST["Name"];
 			$email=$_POST["email"]; 
 			$message=$_POST["message"]; 
 			$dob=$_POST["dob"]; 
