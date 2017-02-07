@@ -38,7 +38,7 @@
                <div class="col-md-2">Name:</div><div class="col-md-10"> <input type="text" name="name"><br><br></div>
                <div class="col-md-2">E-mail:</div><div class="col-md-10"><input type="text" name="email"><br><br></div>
                <div class="col-md-2">Message:</div><div class="col-md-10"> <input type="text" name="message"><br><br></div>
-               <div class="col-md-2">Date:</div><div class="col-md-10"> <input type="dob" name="dob"><br><br></div>
+               <div class="col-md-2">Date:</div><div class="col-md-10"> <input type="date" name="dob"><br><br></div>
                <input type="submit" id="submit">
             </div>
           </form>
@@ -56,15 +56,14 @@
 
      $(document).ready(function(){
      $("#submit").click(function() {
-  //e.preventDefault();
-   //alert("message");
-      var Name = $("#name").val(); 
-      var email = $("#email").val();
-      var message = $("#message").val();
-      var dob = $("#dob").val();
+ 
+      var Name = $("input[name]").val(); 
+      var email = $("input[email]").val();
+      var message = $("input[message]").val();
+      var dob = $("input[dob]").val();
        
        $.ajax({
-          url:'insert.php',
+          url:'insert.php?name='+Name,
           type:'post',
           data: {
                     "Name": Name,
@@ -73,14 +72,15 @@
                     'dob':dob ,
                  },
 
-          dataType: "json",
+          //dataType: "json",
           success:function(data) {
           alert(data);
      //alert("message");
      //url:'insert.php'
            }
       });
-    });
+
+    })return false;
   });
  </script>
  
@@ -118,7 +118,7 @@
       }
      });
     };
-   setInterval(explode, 1000);
+  setInterval(explode, 1000);
 
 
   </script>

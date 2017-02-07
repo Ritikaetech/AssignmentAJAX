@@ -19,12 +19,13 @@ $dbname = "excelarf_ritika";
 			$dob=$_POST["dob"]; 
 			
 			
-$sql = "INSERT INTO MyGuests(Name, Email, Message, Dates) VALUES ($name,$email,$message,$dob)";
-die("riti");
+			
+$sql = "INSERT INTO MyGuests(Name, Email, Message, Dates) VALUES ('$name','$email','$message','$dob')";
+
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
-} 
-}
+				} 
+	}
 mysqli_close($conn);
 
 ?>
