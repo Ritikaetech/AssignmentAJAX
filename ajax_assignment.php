@@ -66,10 +66,10 @@
           url:'insert.php',
           type:'post',
           data: {
-                    "Name": $("input[name]").val(),
-                    'email': $("input[email]").val(),
-                    'message':$("input[message]").val(),
-                    'dob':$("input[dob]").val() ,
+                    'Name': $("#names").val(),
+                    'email': $("#email").val(),
+                    'message':$("#message").val(),
+                    'dob':$("#dob").val() ,
                  },
 
           //dataType: "json",
