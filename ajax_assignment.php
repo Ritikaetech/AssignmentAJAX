@@ -79,8 +79,8 @@
      //url:'insert.php'
            }
       });
-
-    })return false;
+return false;
+    })
   });
  </script>
  
